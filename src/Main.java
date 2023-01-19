@@ -1,0 +1,23 @@
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+import java.io.IOException;
+
+public class Main extends Application  {
+    @Override
+    public void start(Stage stage) throws IOException {
+        db_handler db_handler= new db_handler();
+        db_handler.getDbconnection();
+        
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("AuthForm.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 800, 600);
+        stage.setTitle("Тестирование по Эл.без. УА и МО");
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
+    }
+
+    public static void main(String[] args) {launch();}
+
+}
