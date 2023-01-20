@@ -12,7 +12,7 @@ public class Main extends Application  {
         
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("AuthForm.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 800, 600);
-        stage.setTitle("Тестирование по Эл.без. УА и МО");
+        stage.setTitle("Тестирование");
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();
